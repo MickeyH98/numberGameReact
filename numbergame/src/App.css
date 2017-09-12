@@ -1,5 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+/* CSS RESET */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* END CSS RESET */
+/* START REAL CSS */
+
 body {
   background-color: grey;
+  font-family: 'Indie Flower', cursive;
+  background-image: url("http://data.whicdn.com/images/138718426/original.png");
+}
+
+p {
+  padding: 13px 0;
 }
 
 .App {
@@ -7,32 +69,62 @@ body {
 }
 
 .App div {
-  height: 150px;
-  width: 60%;
-  margin: 50px auto;
+  height: 500px;
+  width: 80%;
+  margin: 80px auto;
   box-shadow: 0px 0px 50px 2px black;
-  border: 5px solid black;
 }
 
 .App div p {
   font-size: 1.75em;
+  color: white;
+  text-shadow: 0px 0px 5px black;
 }
 
-.App div input, button {
+button, input {
   width: 35%;
   margin: 0 5%;
+  font-family: 'Indie Flower', cursive;
+  font-size: 2em;
 }
 
 .startGame {
-  background-color: yellow;
+  background-image: url("https://i.pinimg.com/736x/36/41/bd/3641bd8a4e4342b9f67971a545f0b7ce--white-texture-background-free-paper-texture.jpg");
+  border-radius: 100px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.standardGame {
-  background-color: orange;
+.startGame .startGameP {
+  font-size: 5em;
+  color: white;
 }
 
+.startGameP {
+  padding-top: 120px;
+}
+
+.standardGame,
 .expertGame {
-  background-color: red;
+  background-image: url("https://i.pinimg.com/736x/36/41/bd/3641bd8a4e4342b9f67971a545f0b7ce--white-texture-background-free-paper-texture.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 100px;
+}
+
+.winner {
+  background-image: url("http://pre05.deviantart.net/24e0/th/pre/i/2013/155/8/9/confetti_by_digitalwideresource-d67sk9e.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: pink;
+  border-radius: 100px;
+}
+
+.winner p {
+  padding: 40px 0;
 }
 
 .App .stats {
@@ -45,7 +137,11 @@ body {
   border: none;
   box-shadow: none;
   color: white;
+  position: fixed;
+  bottom: 0;
 }
+
+
 
 .tries {
   float: left;
@@ -57,4 +153,105 @@ body {
   float: left;
   width: 32%;
   height: 25px;
+}
+
+.startStandardButton,
+.startExpertButton {
+  height: 100px;
+  width: 40%;
+  margin: 30px 3%;
+  background-image: url("http://iamprettyonpurpose.com/communities/2/004/012/607/182//images/4614683383.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: inherit;
+}
+
+.startStandardButton:active,
+.startExpertButton:active {
+  outline: dotted red;
+}
+
+.startStandardButton:hover,
+.startExpertButton:hover {
+  -webkit-animation: spin 1000ms infinite linear;
+  -moz-animation: spin 1000ms infinite linear;
+  -ms-animation: spin 1000ms infinite linear;
+  animation: spin 1000ms infinite linear;
+}
+
+.button {
+  background-image: url("http://iamprettyonpurpose.com/communities/2/004/012/607/182//images/4614683383.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: inherit;
+  height: 70px;
+}
+
+.button:hover {
+  -webkit-animation: spin 1000ms infinite linear;
+  -moz-animation: spin 1000ms infinite linear;
+  -ms-animation: spin 1000ms infinite linear;
+  animation: spin 1000ms infinite linear;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.inputField {
+  background-image: url("http://diysolarpanelsv.com/images/clipart-ripped-paper-6.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: inherit;
+  border: none;
+  border-bottom: solid 2px grey;
+  outline: none;
+  -webkit-appearance: none;
+  width: 5%;
+  margin: 0 10%;
+  padding: 20px;
+}
+
+@-ms-keyframes spin {
+    0%, 100% { -ms-transform: rotate(0deg); }
+    25% { -ms-transform: rotate(-3deg)}
+    50% { -ms-transform: rotate(0deg);}
+    75% { -ms-transform: rotate(3deg)}
+}
+
+@-moz-keyframes spin {
+    0%, 100% { -moz-transform: rotate(0deg); }
+    25% { -moz-transform: rotate(-3deg)}
+    50% { -moz-transform: rotate(0deg);}
+    75% { -moz-transform: rotate(3deg)}
+}
+
+@-webkit-keyframes spin {
+    0%, 100% { -webkit-transform: rotate(0deg); }
+    25% { -webkit-transform: rotate(-3deg)}
+    50% { -webkit-transform: rotate(0deg);}
+    75% { -webkit-transform: rotate(3deg)}
+}
+
+@keyframes spin {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-3deg)}
+    50% { transform: rotate(0deg);}
+    75% { transform: rotate(3deg)}
+}
+
+@media screen and (max-width: 560px){
+
+  .startGame .startGameP {
+    font-size: 3em;
+  }
+
+  button {
+    font-size: 1.25em;
+  }
 }
