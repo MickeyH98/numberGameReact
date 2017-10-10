@@ -2,7 +2,7 @@
   "name": "NumberGame",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://mhernandez.road2hire.ninja/numbergamereact/numbergame",
+  "homepage": "http://mhernandez.road2hire.ninja/numbergamereact/numbergamereact/numbergame",
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
